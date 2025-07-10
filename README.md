@@ -66,3 +66,5 @@ You’ll be prompted to input the month, week (Week_1, Week_2, ...), category, a
 
 ## 🤝 Contributing
 This is a solo project for learning, but if you got ideas, hit me up or fork it. I'm always open to collaborating on cool stuff.
+
+https://roadmap.sh/projects/expense-tracker
