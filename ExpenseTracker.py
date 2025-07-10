@@ -103,18 +103,18 @@ What do you want to view?
         view_choice = int(input())
         if view_choice == 1:
             for month, weeks in expenses.items():
-                print(f"{month} : ")
+                print(f"\n{month} : ")
                 for week,categories in weeks.items():
-                    print(f"{week} : ")
+                    print(f" {week} : ")
                     for cat,amt in categories.items():
-                        print(f"{cat} : {amt}")
+                        print(f"--> {cat} : {amt}")
         elif view_choice == 2:
             view_month = input("Enter the month's expense you want to view: ").capitalize()
             if view_month in expenses:
                 for week,categories in expenses[view_month].items():
                     print(f"{week} : ")
                     for cat,amt in categories.items():
-                        print(f"{cat} : {amt}")
+                        print(f"--> {cat} : {amt}")
         elif view_choice == 3:
             view_month = input("Enter the month: ").capitalize()
             if view_month in expenses:
@@ -122,7 +122,7 @@ What do you want to view?
                 if view_week in expenses[view_month]:
                     print(f"Expenses of {view_month}'s {view_week}")
                     for cat,amt in expenses[view_month][view_week].items():
-                        print(f"{cat} : {amt}")
+                        print(f"--> {cat} : {amt}")
                 else:
                     print("Week not found.")
             else:
