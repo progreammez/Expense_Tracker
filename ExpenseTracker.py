@@ -73,7 +73,7 @@ What would you like to do today?
     elif choice == 3:
         delete_month = input("Enter the month's expense you want to delete: ").capitalize()
         if delete_month in expenses:
-            delete_week = input("Enter the week's expense you want to delete(Week_1/Week_2/...)").capitalize()
+            delete_week = input("Enter the week's expense you want to delete(Week_1/Week_2/...): ").capitalize()
             if delete_week in expenses[delete_month]:
                 delete_expense_category = input("Enter the category you want to delete: ").capitalize()
                 if delete_expense_category in expenses[delete_month][delete_week]:
@@ -81,10 +81,10 @@ What would you like to do today?
                     print("Expense successfully deleted.")
                     if not expenses[delete_month][delete_week]:
                         del expenses[delete_month][delete_week]
-                        print("Week deleted as there were not categories left.")
+                        print("Week deleted as there were no categories left.")
                     if not expenses[delete_month]:
                         del expenses[delete_month]
-                        print("Month deleted as there were not weeks left.")
+                        print("Month deleted as there were no weeks left.")
                 else:
                     print("Record not found.")
             else:
